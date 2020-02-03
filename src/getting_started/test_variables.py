@@ -36,3 +36,10 @@ def test_variables():
     variable_with_changed_type = 'Sally'  # x is now of type str
 
     assert variable_with_changed_type == 'Sally'
+
+def test_my_variables():
+    """Test my own variables"""
+    ab_cdd_e = 1
+    my_name = "Evan"
+    assert ab_cdd_e == 1
+    assert my_name == "Evan"
