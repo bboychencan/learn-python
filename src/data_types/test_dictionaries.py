@@ -31,6 +31,7 @@ def test_dictionary():
     }
 
     assert isinstance(fruits_dictionary, dict)
+    assert not isinstance(fruits_dictionary, list)
 
     # You may access set elements by keys.
     assert fruits_dictionary['apple'] == 'green'
@@ -59,6 +60,7 @@ def test_dictionary():
 
     # The dict() constructor builds dictionaries directly from sequences of key-value pairs.
     dictionary_via_constructor = dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
+    assert {'a': 1, 'b': 2, 'c': 3} == dict([('a', 1), ('b', 2), ('c', 3)])
 
     assert dictionary_via_constructor['sape'] == 4139
     assert dictionary_via_constructor['guido'] == 4127
@@ -67,6 +69,8 @@ def test_dictionary():
     # In addition, dict comprehensions can be used to create dictionaries from arbitrary key
     # and value expressions:
     dictionary_via_expression = {x: x**2 for x in (2, 4, 6)}
+    xx = {x: (x + y) for x in range(2) for y in range(2)}
+    print(xx)
     assert dictionary_via_expression[2] == 4
     assert dictionary_via_expression[4] == 16
     assert dictionary_via_expression[6] == 36
@@ -74,6 +78,8 @@ def test_dictionary():
     # When the keys are simple strings, it is sometimes easier to specify pairs using
     # keyword arguments.
     dictionary_for_string_keys = dict(sape=4139, guido=4127, jack=4098)
+
+    assert dict(xy = 1, yz = 2, xz = 3) == {'xy': 1, 'yz': 2, "xz": 3}
     assert dictionary_for_string_keys['sape'] == 4139
     assert dictionary_for_string_keys['guido'] == 4127
     assert dictionary_for_string_keys['jack'] == 4098

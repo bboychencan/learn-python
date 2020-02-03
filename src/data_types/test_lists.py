@@ -274,6 +274,8 @@ def test_list_comprehensions():
     vector = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
     flatten_vector = [num for elem in vector for num in elem]
     assert flatten_vector == [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    test_flatten = [[2,3,4],[1,2,3],[4,3,2]]
+    assert [i for elm in test_flatten for i in elm] == [2,3,4,1,2,3,4,3,2]
 
 
 def test_nested_list_comprehensions():

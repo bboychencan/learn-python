@@ -63,6 +63,11 @@ def test_tuples():
     assert len(singleton_tuple) == 1
     assert singleton_tuple == ('hello',)
 
+    my_singleton = 'abc',
+    assert my_singleton == ('abc', )
+    my_singleton2 = 'this ', 'is', 'new',
+    assert  my_singleton2 == ('this ', 'is', 'new', )
+
     # The following example is called tuple packing:
     packed_tuple = 12345, 54321, 'hello!'
 

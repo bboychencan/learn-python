@@ -137,6 +137,12 @@ def test_string_operators():
         'to have them joined together.'
     )
     assert text == 'Put several strings within parentheses to have them joined together.'
+    my_trial = (
+        "This is a new feature "
+        "Good to know this!"
+        "\n"
+    )
+    assert my_trial == "This is a new feature Good to know this!\n"
 
     # If you want to concatenate variables or a variable and a literal, use +:
     prefix = 'Py'

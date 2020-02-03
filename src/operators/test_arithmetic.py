@@ -42,3 +42,14 @@ def test_arithmetic_operators():
     assert 7 // 3 == 2
     assert 9 // 3 == 3
     assert isinstance(5 // 3, int)
+
+def test_my_arithetic_operators():
+    """my operators"""
+    # addition
+    assert 5 + 5 == 10
+    # subtraction
+    assert 90 - 90.0 == 0.0
+    assert isinstance(5 / 3, float)
+    assert isinstance(4 / 2, float)
+
+    assert 8 + 8 == 16
