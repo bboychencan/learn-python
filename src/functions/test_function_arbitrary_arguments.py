@@ -31,3 +31,6 @@ def test_function_arbitrary_arguments():
 
     assert concat('earth', 'mars', 'venus') == 'earth/mars/venus'
     assert concat('earth', 'mars', 'venus', sep='.') == 'earth.mars.venus'
+
+def test_my_arbitrary_arguments():
+    """Test arbitrary argument list"""

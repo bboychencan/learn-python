@@ -94,6 +94,11 @@ def test_function_definition():
 
     assert call_func(greet_one_more) == 'Hello, John'
 
+    def my_test(name):
+        return 'My name is: {}'.format(name)
+
+    assert call_func(my_test) == 'My name is: John'
+
     # Functions can return other functions. In other words, functions generating other functions.
 
     def compose_greet_func():
@@ -117,6 +122,19 @@ def test_function_definition():
             return 'Hello there, ' + name + '!'
 
         return get_message
+
+    def compose_modify_outer_varialbe(name):
+        age = 10
+
+        def get_message():
+            # age = 3
+            return "{} age is : {}".format(name, age)
+
+        assert age == 10
+        return get_message
+
+    modify_outer_closure = compose_modify_outer_varialbe('John')
+    assert modify_outer_closure() == 'John age is : 10'
 
     greet_with_closure = compose_greet_func_with_closure('John')
 

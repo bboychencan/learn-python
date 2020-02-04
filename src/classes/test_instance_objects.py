@@ -28,3 +28,10 @@ def test_instance_objects():
     dummy_instance.temporary_attribute = 1
     assert dummy_instance.temporary_attribute == 1
     del dummy_instance.temporary_attribute
+
+    # I didn't know the data attributes need not to be declared
+    dummy_instance.idontknow = True
+    assert dummy_instance.idontknow == True
+    del dummy_instance.idontknow
+    assert dummy_instance.__doc__ == "Dummy class"
+    assert DummyClass.__doc__ == "Dummy class"

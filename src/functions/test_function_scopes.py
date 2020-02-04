@@ -105,3 +105,5 @@ def test_global_variable_access():
     # it was changed by "someone" and you need to know about the CONTEXT of who had changed that.
     # So once again access global and non local scope only if you know what you're doing otherwise
     # it might be considered as bad practice.
+
+    # nonlocal, global
