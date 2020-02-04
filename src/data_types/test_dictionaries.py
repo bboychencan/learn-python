@@ -69,8 +69,6 @@ def test_dictionary():
     # In addition, dict comprehensions can be used to create dictionaries from arbitrary key
     # and value expressions:
     dictionary_via_expression = {x: x**2 for x in (2, 4, 6)}
-    xx = {x: (x + y) for x in range(2) for y in range(2)}
-    print(xx)
     assert dictionary_via_expression[2] == 4
     assert dictionary_via_expression[4] == 16
     assert dictionary_via_expression[6] == 36
@@ -79,7 +77,7 @@ def test_dictionary():
     # keyword arguments.
     dictionary_for_string_keys = dict(sape=4139, guido=4127, jack=4098)
 
-    assert dict(xy = 1, yz = 2, xz = 3) == {'xy': 1, 'yz': 2, "xz": 3}
+    assert dict(xy=1, yz=2, xz=3) == {'xy':  1, 'yz': 2, "xz": 3}
     assert dictionary_for_string_keys['sape'] == 4139
     assert dictionary_for_string_keys['guido'] == 4127
     assert dictionary_for_string_keys['jack'] == 4098

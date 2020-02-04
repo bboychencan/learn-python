@@ -19,6 +19,7 @@ def test_raise_exception():
         # exception class is passed, it will be implicitly instantiated by calling its constructor
         # with no arguments
         raise NameError('HiThere')  # shorthand for 'raise ValueError()'
+        raise NameError("someerror")
     except NameError:
         exception_is_caught = True
 
@@ -40,6 +41,20 @@ def test_user_defined_exception():
             self.message = message
 
     custom_exception_is_caught = False
+
+    class My1stError(Exception):
+        """Try by myself"""
+        def __init__(self, msg):
+            super().__init__(msg)
+            self.message = msg
+
+    my1stexception = False
+    try:
+        raise My1stError("My 1st error msg")
+    except My1stError:
+        my1stexception = True
+
+    assert my1stexception == True
 
     try:
         raise MyCustomError('My custom message')

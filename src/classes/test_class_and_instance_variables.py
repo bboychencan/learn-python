@@ -84,3 +84,5 @@ def test_class_and_instance_variables():
 
     assert fido.tricks == ['roll over']
     assert buddy.tricks == ['play dead']
+
+    # Good to learn class variable

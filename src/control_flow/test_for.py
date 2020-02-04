@@ -34,6 +34,8 @@ def test_for_statement():
         if len(word) > 6:
             words.insert(0, word)
 
+    # This is an important tip
+
     # Otherwise with for w in words:, the example would attempt to create an infinite list,
     # inserting defenestrate over and over again.
 

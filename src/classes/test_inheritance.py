@@ -39,6 +39,8 @@ class Employee(Person):
     """
     def __init__(self, name, staff_id):
         Person.__init__(self, name)
+        # This is a new feature to me
+        Person.__init__(self, name)
         # You may also use super() here in order to avoid explicit using of parent class name:
         # >>> super().__init__(name)
         self.staff_id = staff_id
@@ -79,3 +81,5 @@ def test_inheritance():
 
     assert issubclass(Employee, Person)
     assert not issubclass(Person, Employee)
+
+    assert not issubclass(Employee, Exception)

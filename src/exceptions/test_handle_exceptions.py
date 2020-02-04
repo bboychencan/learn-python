@@ -104,3 +104,5 @@ def test_handle_exceptions():
 
     assert not exception_has_been_handled
     assert no_exceptions_has_been_fired
+
+    # Good to learn this feature
